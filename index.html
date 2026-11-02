@@ -65,7 +65,7 @@ h1 em{font-family:var(--serif);font-style:italic;font-weight:700;letter-spacing:
 .voce .ic svg{width:100%;height:100%}
 
 .voce.principale{background:var(--fucsia);border-color:var(--fucsia);color:#fff;min-height:84px;padding:18px 20px;box-shadow:4px 5px 0 rgba(34,124,192,.38)}
-.voce.principale b{font-size:1.28rem}
+.voce.principale b{font-size:1.2rem}
 .voce.principale small{font-size:.9rem;opacity:.95}
 .voce.principale:active{box-shadow:2px 3px 0 rgba(34,124,192,.38)}
 
@@ -81,6 +81,10 @@ h1 em{font-family:var(--serif);font-style:italic;font-weight:700;letter-spacing:
 summary .ic{flex:none;width:36px;height:36px;display:grid;place-items:center}
 summary .ic svg{width:100%;height:100%}
 
+.tess{flex:none;width:46px;height:46px;border-radius:14px;margin-right:-2px;background:rgba(255,255,255,.2);display:grid;place-items:center;align-self:flex-start}
+.tess svg{width:28px;height:28px}
+.tess.bianca{background:#fff;box-shadow:0 3px 0 rgba(59,54,56,.18)}
+.tess.bianca img{width:31px;height:auto}
 .etichetta{display:inline-block;align-self:flex-start;margin-bottom:-4px;font-weight:800;font-size:.7rem;line-height:1;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--ink);padding:7px 10px 6px;border-radius:4px;rotate:-1.6deg}
 .nuovo{display:inline-block;vertical-align:middle;margin-left:6px;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:#fff;color:var(--blu);padding:4px 6px 3px;border-radius:4px}
 
@@ -121,16 +125,19 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   <nav class="lista" aria-label="Tutti i link">
 
     <a class="voce principale" href="https://mentoring.unlikeacademy.it" data-utm>
-      <span class="t"><b>Lavora con il mio team</b><small>Affiancamento del mio team: strategia su misura, call, revisioni dei contenuti e una chat di assistenza tutta per te</small></span>
+      <span class="tess" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M5 8h18a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H13l-5 4v-4H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2z"/><path d="M27 14h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2v4l-5-4h-6a2 2 0 0 1-2-2"/></svg></span>
+      <span class="t"><b>Lavora con me e il mio team</b><small>Affiancamento, strategia su misura, call, revisioni e una chat di assistenza tutta per te</small></span>
       <span class="ar">→</span>
     </a>
 
     <a class="voce stratego" href="https://stratego.social" data-utm>
-      <span class="t"><img src="assets/img/stratego-wordmark-bianco.png" alt="Stratego" width="800" height="179"><strong class="def">Il consulente social AI</strong><small>Ti costruisce strategia e piano editoriale su misura, per non essere mai uguale a nessuno</small></span>
+      <span class="tess bianca" aria-hidden="true"><img src="assets/img/stratego-mascotte.png" alt="" width="390" height="420"></span>
+      <span class="t"><img src="assets/img/stratego-wordmark-bianco.png" alt="Stratego" width="800" height="179"><strong class="def">La piattaforma AI per i tuoi social</strong><small>Ti costruisce strategia e piano editoriale su misura, per non essere mai uguale a nessuno</small></span>
       <span class="ar">→</span>
     </a>
 
     <a class="voce club" href="https://entra.unlikeacademy.it" data-utm>
+      <span class="tess" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><circle cx="18" cy="12" r="5"/><path d="M8 29c0-5.5 4.5-9 10-9s10 3.5 10 9"/><circle cx="7" cy="15" r="3.4"/><path d="M2 27c0-3.5 2.2-6 5.5-6"/><circle cx="29" cy="15" r="3.4"/><path d="M34 27c0-3.5-2.2-6-5.5-6"/></svg></span>
       <span class="t"><b>Entra gratis nel Club</b><small>La community gratuita con lezioni su Instagram e TikTok, live e risorse per crescere sui social</small></span>
       <span class="ar">→</span>
     </a>
