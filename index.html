@@ -108,6 +108,50 @@ details[open] summary .ar{rotate:45deg}
 .risorse span{flex:1;font-size:.92rem;line-height:1.25;font-weight:700;letter-spacing:-.01em}
 .risorse .ar{font-weight:800;font-size:1.2rem}
 
+/* test «Da dove parto?» */
+.parti{margin:-6px 0 22px;text-align:center}
+.parti .nota{display:block;font-family:var(--mano);font-size:1.15rem;color:var(--blu);line-height:1;margin-bottom:8px;rotate:-2deg}
+.parti button{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 18px;border-radius:999px;border:2px dashed var(--blu);background:rgba(255,255,255,.85);color:var(--blu);font:inherit;font-weight:800;font-size:1rem;letter-spacing:-.01em;cursor:pointer}
+.parti button svg{width:24px;height:24px;flex:none}
+.parti button:active{transform:translate(1px,2px)}
+.voce.parla .ic svg{width:34px;height:34px}
+
+.quiz{position:fixed;inset:0;z-index:20;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--carta);
+  background-image:linear-gradient(rgba(34,124,192,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(34,124,192,.10) 1px,transparent 1px),linear-gradient(165deg,#EBF3FA 0%,#F4F8FC 55%,#FCEDF4 100%);
+  background-size:44px 44px,44px 44px,auto}
+.quiz[hidden]{display:none}
+.quiz-box{width:min(440px,100% - 32px);margin-inline:auto;padding:max(18px,env(safe-area-inset-top)) 0 max(28px,env(safe-area-inset-bottom))}
+.quiz-top{display:flex;align-items:center;gap:12px;min-height:44px;margin-bottom:22px}
+.quiz-top .indietro,.quiz-top .chiudi{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:1.3rem;font-weight:800;line-height:1;cursor:pointer;display:grid;place-items:center}
+.quiz-top .indietro[disabled]{visibility:hidden}
+.passi{flex:1;display:flex;gap:6px}
+.passi i{flex:1;height:6px;border-radius:3px;background:rgba(34,124,192,.18)}
+.passi i.ok{background:var(--blu)}
+.quiz-q{animation:entra .25s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.quiz-q .num{font-family:var(--mano);font-size:1.15rem;color:var(--fucsia)}
+.quiz-q h2{font-size:1.6rem;line-height:1.08;letter-spacing:-.04em;color:var(--ink);font-weight:900;margin:4px 0 18px}
+.quiz-q h2 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--fucsia);letter-spacing:-.02em}
+.scelte{display:flex;flex-direction:column;gap:10px}
+.scelte button{width:100%;text-align:left;min-height:56px;padding:13px 16px;border-radius:16px;background:#fff;border:1.5px solid var(--line);box-shadow:3px 4px 0 rgba(59,54,56,.10);color:var(--ink);font:inherit;font-weight:700;font-size:.98rem;line-height:1.25;cursor:pointer}
+.scelte button:active,.scelte button.scelta{border-color:var(--fucsia);background:var(--rosa-bg)}
+.scelte button small{display:block;font-weight:400;font-size:.84rem;opacity:.8;margin-top:2px}
+
+.esito{animation:entra .3s ease}
+.esito .occhiello{display:inline-block;font-weight:800;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--ink);padding:7px 10px 6px;border-radius:5px}
+.esito h2{font-size:1.75rem;line-height:1.05;letter-spacing:-.045em;color:var(--ink);font-weight:900;margin:14px 0 10px}
+.esito h2 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--fucsia);letter-spacing:-.02em}
+.esito p{font-size:1rem;color:var(--body);margin-bottom:10px}
+.esito .rate{font-size:.88rem;font-weight:700;color:var(--blu)}
+.esito .azioni{display:flex;flex-direction:column;gap:12px;margin:20px 0 6px}
+.esito .azioni .voce{min-height:64px}
+.esito .extra{margin-top:20px;padding-top:16px;border-top:1.5px dashed var(--line);font-size:.92rem}
+.esito .extra a{display:flex;align-items:center;gap:10px;margin-top:8px;padding:12px 14px;border-radius:14px;background:#fff;border:1.5px solid var(--line);color:var(--ink);font-weight:700}
+.esito .extra a b{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--fucsia);padding:5px 7px 4px;border-radius:4px;flex:none}
+.esito .extra a span{flex:1;line-height:1.25}
+.esito .rifai{display:block;margin:22px auto 0;background:none;border:0;font:inherit;font-size:.88rem;color:var(--body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+body.bloccato{overflow:hidden}
+
 footer{margin-top:30px;text-align:center;font-size:.8rem;color:var(--body)}
 footer a{text-decoration:underline;text-underline-offset:3px}
 .nascosto{display:none!important}
@@ -123,6 +167,14 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <h1>Ciao, sono <em>Gemma</em></h1>
     <p class="bio">Trasformo competenze in clienti grazie ai social, in modo autentico</p>
   </header>
+
+  <div class="parti">
+    <span class="nota">non sai da dove partire?</span>
+    <button type="button" id="apriTest" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15.8 8.2l-2.3 5.3-5.3 2.3 2.3-5.3z" fill="currentColor"/></svg>
+      Da dove parto? Fai il test, 4 domande
+    </button>
+  </div>
 
   <nav class="lista" aria-label="Tutti i link">
 
@@ -141,6 +193,12 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <a class="voce club" href="https://entra.unlikeacademy.it" data-utm>
       <span class="tess bianca" aria-hidden="true"><img src="assets/img/logo-academy-quadrato.png" alt="" width="240" height="240"></span>
       <span class="t"><b>Entra gratis nel Club</b><small>La community gratuita con lezioni su Instagram e TikTok, live e risorse per crescere sui social</small></span>
+      <span class="ar">→</span>
+    </a>
+
+    <a class="voce parla" id="vParla" href="https://wa.me/393513043290" data-utm="no" target="_blank" rel="noopener">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" stroke="#CD2471" stroke-width="3" stroke-linejoin="round"><path d="M18 5c7.2 0 13 5.2 13 11.6S25.2 28.2 18 28.2c-1.5 0-3-.2-4.3-.6L7 31l1.6-5.6C6.4 23.3 5 20.1 5 16.6 5 10.2 10.8 5 18 5z"/><circle cx="12.5" cy="16.8" r="1.6" fill="#CD2471" stroke="none"/><circle cx="18" cy="16.8" r="1.6" fill="#CD2471" stroke="none"/><circle cx="23.5" cy="16.8" r="1.6" fill="#CD2471" stroke="none"/></svg></span>
+      <span class="t"><b>Parla con noi</b><small>Scrivici su WhatsApp: ti aiutiamo a capire da dove partire</small></span>
       <span class="ar">→</span>
     </a>
 
@@ -176,6 +234,17 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   <footer><a href="https://unlikeacademy.it" data-utm>unlikeacademy.it</a></footer>
 </main>
 
+<div class="quiz" id="test" role="dialog" aria-modal="true" aria-labelledby="testTitolo" hidden>
+  <div class="quiz-box">
+    <div class="quiz-top">
+      <button type="button" class="indietro" id="testIndietro" aria-label="Domanda precedente">←</button>
+      <div class="passi" id="testPassi" aria-hidden="true"></div>
+      <button type="button" class="chiudi" id="testChiudi" aria-label="Chiudi il test">×</button>
+    </div>
+    <div id="testCorpo" aria-live="polite"></div>
+  </div>
+</div>
+
 <script>
 (function(){
   // da dove arriva chi apre la pagina: bio di Instagram o di TikTok (?s=instagram / ?s=tiktok)
@@ -194,6 +263,139 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   });
   // chi arriva da Instagram non ha bisogno del bottone Instagram
   if(s==='instagram'){var v=document.getElementById('vIg');if(v)v.classList.add('nascosto')}
+
+  // «Parla con noi» fisso: messaggio già scritto
+  var WA='https://wa.me/393513043290?text=';
+  document.getElementById('vParla').href=WA+encodeURIComponent('Ciao! Vengo dal link in bio di Gemma e vorrei un consiglio su da dove partire');
+
+  // test «Da dove parto?»: 4 domande, poi il punto di partenza giusto
+  var DOMANDE=[
+    {k:'chi',t:'Chi <em>sei?</em>',o:[
+      ['pro','Professionista o coach','Ho già clienti'],
+      ['brand','Ho un brand, un negozio o un e-commerce'],
+      ['locale',"Ho un locale o un'attività sul territorio"],
+      ['smm','Social media manager o UGC creator','O voglio diventarlo'],
+      ['mio','Voglio creare qualcosa di mio'],
+      ['network','Faccio network marketing']]},
+    {k:'punto',t:'A che punto <em>sei?</em>',o:[
+      ['zero','Parto da zero'],
+      ['fermi',"Il lavoro c'è, ma i social non portano clienti"],
+      ['salto','Funziona già, voglio fare il salto']]},
+    {k:'frase',t:'Quale frase senti <em>più tua?</em>',o:[
+      ['caso','«Pubblico a caso, non ho una linea»'],
+      ['trenta','«Mi guardano sempre le solite 30 persone»'],
+      ['follower','«Ho follower, ma non clienti»'],
+      ['tempo','«Non ho tempo»'],
+      ['faccia','«Mi blocca metterci la faccia»'],
+      ['delega','«Vorrei che qualcuno lo facesse al posto mio»']]},
+    {k:'aiuto',t:'Come vuoi <em>farti aiutare?</em>',o:[
+      ['club','Gratis, partendo dalle basi','Insieme a una community'],
+      ['stratego','In autonomia','Con uno strumento AI che mi guida'],
+      ['team','Con un team che mi segue','E mi corregge i contenuti'],
+      ['consiglio','Non lo so, voglio un consiglio']]}
+  ];
+  var RISORSE={
+    caso:['Cervello',"Usa il cervello prima dell'AI",'https://cervello.unlikeacademy.it'],
+    trenta:['Profilo','Rifacciamo il profilo insieme, un pezzo a settimana','https://profilo.unlikeacademy.it'],
+    follower:['Profilo','Rifacciamo il profilo insieme, un pezzo a settimana','https://profilo.unlikeacademy.it'],
+    tempo:['Claude','Claude per i tuoi social, con la tua testa dentro','https://aigratis.unlikeacademy.it'],
+    faccia:['Montaggio',"Video con l'AI, senza buttare soldi",'https://montaggio.unlikeacademy.it']
+  };
+  var R={},passo=0;
+  var box=document.getElementById('test'),corpo=document.getElementById('testCorpo'),
+      passi=document.getElementById('testPassi'),indietro=document.getElementById('testIndietro');
+
+  function conUtm(url,esito){
+    var u=new URL(url);
+    u.searchParams.set('utm_source',s);u.searchParams.set('utm_medium','bio');
+    u.searchParams.set('utm_campaign','linkinbio');u.searchParams.set('utm_content','quiz-'+esito);
+    return u.toString();
+  }
+  function etichetta(k){
+    var d=DOMANDE.filter(function(x){return x.k===k})[0];
+    var o=d.o.filter(function(x){return x[0]===R[k]})[0];
+    return o?o[1].replace(/[«»]/g,'')+(o[2]?' ('+o[2].toLowerCase()+')':''):'';
+  }
+  function linkWa(){
+    return WA+encodeURIComponent('Ciao! Ho fatto il test sul link in bio di Gemma\n'+
+      '· Chi sono: '+etichetta('chi')+'\n· A che punto sono: '+etichetta('punto')+'\n'+
+      '· La frase più mia: '+etichetta('frase')+'\n· Come vorrei farmi aiutare: '+etichetta('aiuto')+'\n'+
+      'Mi date un consiglio su da dove partire?');
+  }
+  function disegnaPassi(){
+    passi.innerHTML='';
+    for(var i=0;i<DOMANDE.length;i++){var b=document.createElement('i');if(i<passo)b.className='ok';passi.appendChild(b)}
+    indietro.disabled=passo===0;
+  }
+  function domanda(){
+    var d=DOMANDE[passo];disegnaPassi();
+    var h='<div class="quiz-q"><span class="num">domanda '+(passo+1)+' di '+DOMANDE.length+'</span><h2 id="testTitolo">'+d.t+'</h2><div class="scelte">';
+    d.o.forEach(function(o){h+='<button type="button" data-v="'+o[0]+'"'+(R[d.k]===o[0]?' class="scelta"':'')+'>'+o[1]+(o[2]?'<small>'+o[2]+'</small>':'')+'</button>'});
+    corpo.innerHTML=h+'</div></div>';
+    corpo.querySelectorAll('.scelte button').forEach(function(b){
+      b.addEventListener('click',function(){
+        R[d.k]=b.getAttribute('data-v');
+        passo++;box.scrollTop=0;
+        if(passo<DOMANDE.length)domanda();else esito();
+      });
+    });
+    var primo=corpo.querySelector('.scelte button');if(primo)primo.focus({preventScroll:true});
+  }
+  function bottone(cls,href,titolo,sotto,nuovaScheda){
+    return '<a class="voce '+cls+'" href="'+href+'"'+(nuovaScheda?' target="_blank" rel="noopener"':'')+'><span class="t"><b>'+titolo+'</b>'+(sotto?'<small>'+sotto+'</small>':'')+'</span><span class="ar">→</span></a>';
+  }
+  function esito(){
+    disegnaPassi();indietro.disabled=false;
+    var chi=R.chi,punto=R.punto,frase=R.frase,aiuto=R.aiuto,e={},wa=linkWa();
+    var parla=bottone('parla',wa,'Parla con noi','Le tue risposte sono già nel messaggio',true);
+    if(frase==='delega'){
+      e={k:'delega',tit:'Te lo diciamo <em>subito</em>',
+        txt:['Non gestiamo i social al posto tuo: ti insegniamo a farlo con il nostro metodo, oppure formiamo una persona del tuo team, così il lavoro resta in casa','Scrivici e capiamo insieme qual è la strada giusta per te'],
+        az:bottone('principale',wa,'Parla con noi','Le tue risposte sono già nel messaggio',true)+bottone('stratego',conUtm('https://stratego.social','delega'),'Hai poco tempo? Prova Stratego','Strategia e piano editoriale su misura, fatti dall\'AI')};
+    }else if(aiuto==='consiglio'){
+      e={k:'consiglio',tit:'Ti diciamo noi <em>da dove partire</em>',
+        txt:['Scrivici su WhatsApp: le tue risposte sono già nel messaggio, così partiamo da te e non da un copione'],
+        az:bottone('principale',wa,'Parla con noi','Ti risponde una persona del team, non un bot',true)+bottone('club',conUtm('https://entra.unlikeacademy.it','consiglio'),'Intanto entra gratis nel Club','Lezioni su Instagram e TikTok, live e risorse')};
+    }else if(aiuto==='club'){
+      e={k:'club',tit:'Parti dal <em>Club gratis</em>',
+        txt:[chi==='smm'?'Nel Club quasi una persona su tre fa il tuo lavoro: lezioni, idee per te e per i tuoi clienti, live e una community con cui confrontarti':'Lezioni su Instagram e TikTok, live e risorse per smettere di pubblicare a caso e capire cosa funziona per te, gratis'],
+        az:bottone('club',conUtm('https://entra.unlikeacademy.it','club'),'Entra gratis nel Club','Ti iscrivi in un minuto')};
+    }else if(aiuto==='stratego'){
+      e={k:'stratego',tit:'Il tuo punto di partenza: <em>Stratego</em>',
+        txt:['La piattaforma AI che ti costruisce strategia e piano editoriale su misura, per non essere mai uguale a nessuno'+(frase==='tempo'?' e per non perdere ore a chiederti cosa pubblicare':'')],
+        az:bottone('stratego',conUtm('https://stratego.social','stratego'),'Scopri Stratego','La piattaforma AI per i tuoi social')};
+    }else{
+      var p;
+      if(chi==='smm')p=['smm','il percorso per <em>Social Media Manager</em>','Da SMM tuttofare a specialista di nicchia: metodo, strumenti pronti e un team che ti segue e ti corregge i contenuti'];
+      else if(punto==='salto')p=['professionista','il percorso <em>Professionista</em>','Da competente a punto di riferimento: strategia, offerta e funnel costruiti con il team, che ti segue per cinque mesi'];
+      else if(punto==='fermi'&&frase==='caso')p=['tre-mesi','il percorso <em>di tre mesi</em>','Da contenuti a caso a una linea chiara: strategia su misura, call, revisioni dei contenuti e una chat di assistenza tutta per te'];
+      else p=['un-mese','il percorso <em>di un mese</em>','Un mese con il team: strategia scritta su misura, call, revisioni dei contenuti e una chat di assistenza tutta per te'];
+      var txt=[p[2]];
+      if(chi==='locale')txt.push('Ideale da fare in bassa stagione, così riapri con il piano già pronto');
+      if(p[0]==='un-mese')txt.push('Se poi vuoi andare avanti, quello che hai pagato si scala dal percorso lungo');
+      e={k:p[0],tit:'Per te: '+p[1],txt:txt,rate:true,
+        az:bottone('principale',conUtm('https://mentoring.unlikeacademy.it',p[0]),'Scopri il percorso','Cosa c\'è dentro, casi studio e come funziona')+parla};
+    }
+    var h='<div class="esito"><span class="occhiello">Il tuo punto di partenza</span><h2 id="testTitolo">'+e.tit+'</h2>';
+    e.txt.forEach(function(t){h+='<p>'+t+'</p>'});
+    if(e.rate)h+='<p class="rate">Si può pagare anche a rate</p>';
+    h+='<div class="azioni">'+e.az+'</div>';
+    if(e.k==='club'||e.k==='stratego')h+='<div class="azioni">'+parla+'</div>';
+    var r=RISORSE[frase];
+    if(r)h+='<div class="extra">Intanto, una risorsa gratis per te<a href="'+conUtm(r[2],'risorsa-'+r[0].toLowerCase())+'"><b>'+r[0]+'</b><span>'+r[1]+'</span><i class="ar">→</i></a></div>';
+    h+='<button type="button" class="rifai" id="testRifai">Rifai il test</button></div>';
+    corpo.innerHTML=h;
+    document.getElementById('testRifai').addEventListener('click',function(){R={};passo=0;box.scrollTop=0;domanda()});
+  }
+  var daDove=null;
+  function apri(){daDove=document.activeElement;R={};passo=0;box.hidden=false;document.body.classList.add('bloccato');box.scrollTop=0;domanda()}
+  function chiudi(){box.hidden=true;document.body.classList.remove('bloccato');if(location.hash==='#test')history.replaceState(null,'',location.pathname+location.search);if(daDove)daDove.focus()}
+  document.getElementById('apriTest').addEventListener('click',apri);
+  document.getElementById('testChiudi').addEventListener('click',chiudi);
+  indietro.addEventListener('click',function(){if(passo>0){passo--;box.scrollTop=0;domanda()}});
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!box.hidden)chiudi()});
+  // link diretto al test (es. da ManyChat o da altre pagine): link.gemmalenoci.com/#test
+  if(location.hash==='#test')apri();
 })();
 </script>
 </body>
