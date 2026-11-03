@@ -154,6 +154,12 @@ body.bloccato{overflow:hidden}
 
 footer{margin-top:30px;text-align:center;font-size:.8rem;color:var(--body)}
 footer a{text-decoration:underline;text-underline-offset:3px}
+.siti{display:inline-block;background:none;border:0;box-shadow:none;border-radius:0;overflow:visible}
+.siti summary{display:inline-flex;min-height:44px;gap:6px;padding:0 10px;font-size:.84rem;font-weight:700;color:var(--body)}
+.siti summary span{font-size:1rem;line-height:1;transition:rotate .2s}
+.siti[open] summary span{rotate:45deg}
+.siti ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;padding-bottom:6px}
+.siti li a{display:inline-block;padding:6px 2px}
 .nascosto{display:none!important}
 
 @media (min-width:600px){main{padding-top:56px}}
@@ -231,7 +237,16 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 
   </nav>
 
-  <footer><a href="https://unlikeacademy.it" data-utm>unlikeacademy.it</a></footer>
+  <footer>
+    <details class="siti">
+      <summary>Gli altri siti <span aria-hidden="true">+</span></summary>
+      <ul>
+        <li><a href="https://gemmalenoci.com" data-utm>gemmalenoci.com</a></li>
+        <li><a href="https://unlikeagency.com" data-utm>unlikeagency.com</a></li>
+        <li><a href="https://unlikeacademy.it" data-utm>unlikeacademy.it</a></li>
+      </ul>
+    </details>
+  </footer>
 </main>
 
 <div class="quiz" id="test" role="dialog" aria-modal="true" aria-labelledby="testTitolo" hidden>
