@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Unlike Academy//Live 26-11//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:live-26-11-2026@unlikeacademy.it
+DTSTAMP:20261123T050000Z
+DTSTART:20261126T183000Z
+DTEND:20261126T200000Z
+SUMMARY:Live con Gemma · Clienti dai social nel 2027
+DESCRIPTION:Live gratuita con Gemma Lenoci: come ti distingui quando con l'AI siamo tutti uguali\n\nIl link per entrare: https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26\n\nTieni pronto sul telefono il tuo ultimo post: lo testiamo in diretta
+LOCATION:https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26
+URL:https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Tra un'ora la live con Gemma
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Tra 10 minuti la live con Gemma
+END:VALARM
+END:VEVENT
+END:VCALENDAR
