@@ -5,13 +5,20 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:live-26-11-2026@unlikeacademy.it
-DTSTAMP:20261123T050000Z
+DTSTAMP:20261125T121551Z
+SEQUENCE:1
 DTSTART:20261126T183000Z
 DTEND:20261126T200000Z
 SUMMARY:Live con Gemma · Clienti dai social nel 2027
-DESCRIPTION:Live gratuita con Gemma Lenoci: come ti distingui quando con l'AI siamo tutti uguali\n\nIl link per entrare: https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26\n\nTieni pronto sul telefono il tuo ultimo post: lo testiamo in diretta
-LOCATION:https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26
-URL:https://black.unlikeacademy.it/?utm_source=calendario&utm_campaign=bf26
+DESCRIPTION:Live gratuita con Gemma Lenoci: come ti distingui quando con l'
+ AI siamo tutti uguali\n\nPer entrare apri questa pagina e clicca «Conferm
+ a la tua presenza»: https://club.unlikeacademy.it/c/dirette/tutti-uguali-
+ con-l-ai-a94e205c-b556-4848-abcc-44c8b25fd7c1\n\nTieni pronto sul telefono
+  il tuo ultimo post: lo testiamo in diretta
+LOCATION:https://club.unlikeacademy.it/c/dirette/tutti-uguali-con-l-ai-a94e
+ 205c-b556-4848-abcc-44c8b25fd7c1
+URL:https://club.unlikeacademy.it/c/dirette/tutti-uguali-con-l-ai-a94e205c-
+ b556-4848-abcc-44c8b25fd7c1
 BEGIN:VALARM
 TRIGGER:-PT60M
 ACTION:DISPLAY
