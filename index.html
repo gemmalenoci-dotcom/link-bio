@@ -177,7 +177,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <script src="https://academy.unlikeacademy.it/traccia.js?v=1" defer data-risorsa="link"></script>
 </head>
 <body>
-<a class="strip" data-striscia-live href="https://black.unlikeacademy.it/offerte.html?utm_source=linkbio&amp;utm_medium=striscia&amp;utm_campaign=bf26" target="_blank" rel="noopener" style="display:block;background:#CD2471;color:#fff;text-decoration:none;font-size:14.5px;font-weight:600;text-align:center;padding:9px 16px;line-height:1.4"><b style="color:#fff">Black Friday</b> · il Club per un anno a 395€ fino a martedì 1/12 alle 23:59 · <u style="color:#fff">Vedi le offerte</u></a><script data-striscia>(function(){if(Date.now()<Date.UTC(2026,11,1,23,0))return;var s=document.querySelector('a[data-striscia-live],a.strip[data-live]');if(!s)return;s.remove();})()</script>
+<a class="strip" data-striscia-live href="https://black.unlikeacademy.it/offerte.html?utm_source=linkbio&amp;utm_medium=striscia&amp;utm_campaign=bf26" target="_blank" rel="noopener" style="display:block;background:#CD2471;color:#fff;text-decoration:none;font-size:14.5px;font-weight:600;text-align:center;padding:9px 16px;line-height:1.4"><b style="color:#fff">Black Friday</b> · sconto sul Club fino a martedì 1/12 alle 23:59 · <u style="color:#fff">Scopri le offerte</u></a><script data-striscia>(function(){if(Date.now()<Date.UTC(2026,11,1,23,0))return;var s=document.querySelector('a[data-striscia-live],a.strip[data-live]');if(!s)return;s.remove();})()</script>
 <main>
   <header class="testata">
     <figure class="foto"><img src="assets/img/gemma-polaroid.jpg" alt="Gemma Lenoci" width="390" height="520"><span>Gemma</span></figure>
@@ -196,8 +196,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   <nav class="lista" aria-label="Tutti i link">
 
     <a class="voce live" id="vLive" href="https://black.unlikeacademy.it/offerte.html?utm_source=link&amp;utm_medium=bio&amp;utm_campaign=bf26&amp;utm_content=link-offerte" data-utm="no" target="_blank" rel="noopener">
-      <span class="tess data" id="vLiveData" aria-hidden="true"><span class="g">50%</span><span class="m">SCONTO</span></span>
-      <span class="t"><span class="etic" id="vLiveEtic">Black Friday</span><b>Il Club per un anno a 395€ invece di 790€</b><small id="vLiveSotto">Fino a martedì 1 dicembre alle 23:59 · con il percorso (RE)START a 829€ fino a domenica 29 novembre alle 23:59</small></span>
+      <span class="tess data" id="vLiveData" aria-hidden="true"><span class="g">%</span><span class="m">SCONTI</span></span>
+      <span class="t"><span class="etic" id="vLiveEtic">Black Friday</span><b id="vLiveTit">Sconti sul Club e sul percorso (RE)START</b><small id="vLiveSotto">Il percorso (RE)START fino a domenica 29 novembre, il Club fino a martedì 1 dicembre</small></span>
       <span class="ar">→</span>
     </a>
 
@@ -310,6 +310,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
       l.href=u.toString();
     }catch(e){}
     if(ora>=soloClub){
+      document.getElementById('vLiveTit').textContent='Sconto sul Club';
       document.getElementById('vLiveSotto').textContent='Ultimi giorni, fino a martedì 1 dicembre alle 23:59';
     }
   })();
